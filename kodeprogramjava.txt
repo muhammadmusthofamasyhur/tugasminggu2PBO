@@ -1,0 +1,61 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int x; // tipe data
+        int y; // variabel
+        int[] a = new int[10]; // array 1D
+        int[][] b = {{2, 4}, {7, 1}}; // array 2D
+        char repeat;
+
+        do { // do-while loop
+            System.out.print("Input the x values : "); // output
+            x = input.nextInt(); // input
+
+            System.out.print("Input the y values : ");
+            y = input.nextInt();
+
+            if (x > y) { // if-else
+                System.out.println("x is greater than y");
+            } else {
+                System.out.println("y is greater than x");
+            }
+            System.out.println();
+            System.out.println();
+
+            for (int i = 0; i < 5; i++) { // for loop
+                System.out.print("Input the a[" + (i + 1) + "] values : ");
+                a[i] = input.nextInt();
+            }
+            System.out.println();
+
+            System.out.println("Array a : ");
+            int i = 0;
+            while (i < 5) { // while loop
+                System.out.print(a[i] + " ");
+                i++;
+            }
+            System.out.println();
+            System.out.println();
+
+            System.out.println("Array b : ");
+            for (int j = 0; j < 2; j++) {
+                for (int k = 0; k < 2; k++) {
+                    System.out.print(b[j][k] + " ");
+                }
+                System.out.println();
+            }
+            System.out.println();
+
+            System.out.print("Repeat? (y/n) : ");
+            repeat = input.next().charAt(0);
+            System.out.println();
+
+        } while (repeat == 'y');
+    }
+     /*Muhammad Musthofa Masyhur
+     NIM 2200018476
+     Kelas J*/
+
+}
